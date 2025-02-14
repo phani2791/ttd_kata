@@ -1,6 +1,6 @@
 export class Calculator {
   add(input: string): number {
-    if (!/^\d+(\s*,\s*\d+)*$/.test(input)) {
+    if (!/^-?\d+(\s*,\s*-?\d+)*$/.test(input)) {
       throw new Error(INVALID_STRING_MSG);
     }
     const numberStrings = input.split(",");

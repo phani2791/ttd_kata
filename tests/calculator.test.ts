@@ -49,4 +49,8 @@ describe("Calculator", () => {
       calculator.add("//[*][%]\n1*2%3");
     }).toThrow(INVALID_STRING_MSG);
   });
+
+  test("should handle negative numbers", () => {
+    expect(calculator.add("-1,-2")).toBe(-3);
+  });
 });
