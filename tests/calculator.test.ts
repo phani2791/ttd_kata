@@ -6,4 +6,8 @@ describe("Calculator", () => {
   beforeEach(() => {
     calculator = new Calculator();
   });
+
+  test("should add two numbers", () => {
+    expect(calculator.add("1, 2")).toBe(3);
+  });
 });
