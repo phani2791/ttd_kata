@@ -27,4 +27,10 @@ describe("Calculator", () => {
       calculator.add("1,");
     }).toThrow(INVALID_STRING_MSG);
   });
+
+  test("check for space between two numbers", () => {
+    expect(() => {
+      calculator.add("1,,3,,4,,5,,");
+    }).toThrow(INVALID_STRING_MSG);
+  });
 });
