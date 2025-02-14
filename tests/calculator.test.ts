@@ -1,9 +1,8 @@
-import { Calculator } from "../src/calculator";
+import { Calculator, INVALID_STRING_MSG } from "../src/calculator";
 
 describe("Calculator", () => {
   let calculator: Calculator;
-  const INVALID_STRING_MSG =
-    "Provide valid string of numbers separated by commas";
+
   beforeEach(() => {
     calculator = new Calculator();
   });
@@ -26,6 +25,6 @@ describe("Calculator", () => {
   test("check for min two numbers", () => {
     expect(() => {
       calculator.add("1,");
-    }).toThrow("Provide at least two numbers");
+    }).toThrow(INVALID_STRING_MSG);
   });
 });
