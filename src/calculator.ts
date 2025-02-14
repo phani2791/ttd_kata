@@ -7,11 +7,6 @@ export class Calculator {
     const numbers = numberStrings
       .map((numberString) => parseFloat(numberString.trim()))
       .filter((number) => !isNaN(number));
-    console.log(numbers);
-
-    if (numbers.length == 0) {
-      throw new Error("Provide valid string of numbers separated by commas");
-    }
     if (numbers.length == 1) {
       throw new Error("Provide at least two numbers");
     }
